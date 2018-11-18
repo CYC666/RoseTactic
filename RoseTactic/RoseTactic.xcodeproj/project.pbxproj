@@ -13,6 +13,37 @@
 		179EDA7421A114D800A107A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179EDA7321A114D800A107A0 /* Assets.xcassets */; };
 		179EDA7721A114D800A107A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179EDA7521A114D800A107A0 /* LaunchScreen.storyboard */; };
 		179EDA7A21A114D800A107A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 179EDA7921A114D800A107A0 /* main.m */; };
+		179EDA8521A1161200A107A0 /* TacticController.m in Sources */ = {isa = PBXBuildFile; fileRef = 179EDA8321A1161200A107A0 /* TacticController.m */; };
+		179EDA8621A1161200A107A0 /* TacticController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179EDA8421A1161200A107A0 /* TacticController.xib */; };
+		179EDA8A21A1161F00A107A0 /* RoseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 179EDA8821A1161F00A107A0 /* RoseController.m */; };
+		179EDA8B21A1161F00A107A0 /* RoseController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179EDA8921A1161F00A107A0 /* RoseController.xib */; };
+		179EDA8F21A116D200A107A0 /* RoseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 179EDA8D21A116D200A107A0 /* RoseCell.m */; };
+		179EDA9021A116D200A107A0 /* RoseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179EDA8E21A116D200A107A0 /* RoseCell.xib */; };
+		179EDA9421A11BF700A107A0 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 179EDA9321A11BF700A107A0 /* TabBarController.m */; };
+		179EDA9821A12B0900A107A0 /* RoseDetialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 179EDA9621A12B0900A107A0 /* RoseDetialController.m */; };
+		179EDA9921A12B0900A107A0 /* RoseDetialController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179EDA9721A12B0900A107A0 /* RoseDetialController.xib */; };
+		179EDA9D21A12E2600A107A0 /* TacticCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 179EDA9B21A12E2600A107A0 /* TacticCell.m */; };
+		179EDA9E21A12E2600A107A0 /* TacticCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179EDA9C21A12E2600A107A0 /* TacticCell.xib */; };
+		179EDAA221A190D300A107A0 /* tactic1.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 179EDAA121A190D300A107A0 /* tactic1.rtfd */; };
+		179EDAA621A193B000A107A0 /* TacticDetialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 179EDAA421A193B000A107A0 /* TacticDetialController.m */; };
+		179EDAA721A193B000A107A0 /* TacticDetialController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179EDAA521A193B000A107A0 /* TacticDetialController.xib */; };
+		179EDAAA21A1A4E900A107A0 /* tactic2.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 179EDAA921A1A4E900A107A0 /* tactic2.rtfd */; };
+		179EDAAC21A1A87D00A107A0 /* tactic3.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 179EDAAB21A1A87D00A107A0 /* tactic3.rtfd */; };
+		179EDAAF21A1A96900A107A0 /* tactic5.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 179EDAAE21A1A96900A107A0 /* tactic5.rtfd */; };
+		179EDAB121A1A99900A107A0 /* tactic6.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 179EDAB021A1A99900A107A0 /* tactic6.rtfd */; };
+		179EDAB321A1AA0500A107A0 /* tactic4.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 179EDAB221A1AA0500A107A0 /* tactic4.rtfd */; };
+		179EDAB721A1AB3800A107A0 /* tactic7.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 179EDAB621A1AB3800A107A0 /* tactic7.rtfd */; };
+		179EDAB921A1AB3F00A107A0 /* tactic8.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 179EDAB821A1AB3F00A107A0 /* tactic8.rtfd */; };
+		179EDABB21A1AB4D00A107A0 /* tactic9.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 179EDABA21A1AB4D00A107A0 /* tactic9.rtfd */; };
+		179EDABD21A1AB5500A107A0 /* tactic10.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 179EDABC21A1AB5500A107A0 /* tactic10.rtfd */; };
+		179EDABF21A1AB5A00A107A0 /* tactic11.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 179EDABE21A1AB5A00A107A0 /* tactic11.rtfd */; };
+		179EDAC121A1AB5F00A107A0 /* tactic12.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 179EDAC021A1AB5F00A107A0 /* tactic12.rtfd */; };
+		179EDAC321A1AB6500A107A0 /* tactic13.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 179EDAC221A1AB6500A107A0 /* tactic13.rtfd */; };
+		179EDAC521A1AB6B00A107A0 /* tactic14.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 179EDAC421A1AB6B00A107A0 /* tactic14.rtfd */; };
+		179EDACA21A1BA9C00A107A0 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 179EDAC821A1BA9C00A107A0 /* SettingController.m */; };
+		179EDACB21A1BA9C00A107A0 /* SettingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179EDAC921A1BA9C00A107A0 /* SettingController.xib */; };
+		179EDACF21A1BE9100A107A0 /* MyCollectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 179EDACD21A1BE9100A107A0 /* MyCollectController.m */; };
+		179EDAD021A1BE9100A107A0 /* MyCollectController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179EDACE21A1BE9100A107A0 /* MyCollectController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +57,47 @@
 		179EDA7621A114D800A107A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		179EDA7821A114D800A107A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		179EDA7921A114D800A107A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		179EDA8221A1161200A107A0 /* TacticController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TacticController.h; sourceTree = "<group>"; };
+		179EDA8321A1161200A107A0 /* TacticController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TacticController.m; sourceTree = "<group>"; };
+		179EDA8421A1161200A107A0 /* TacticController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TacticController.xib; sourceTree = "<group>"; };
+		179EDA8721A1161F00A107A0 /* RoseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoseController.h; sourceTree = "<group>"; };
+		179EDA8821A1161F00A107A0 /* RoseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoseController.m; sourceTree = "<group>"; };
+		179EDA8921A1161F00A107A0 /* RoseController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoseController.xib; sourceTree = "<group>"; };
+		179EDA8C21A116D200A107A0 /* RoseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoseCell.h; sourceTree = "<group>"; };
+		179EDA8D21A116D200A107A0 /* RoseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoseCell.m; sourceTree = "<group>"; };
+		179EDA8E21A116D200A107A0 /* RoseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoseCell.xib; sourceTree = "<group>"; };
+		179EDA9121A117A400A107A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		179EDA9221A11BF700A107A0 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		179EDA9321A11BF700A107A0 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		179EDA9521A12B0900A107A0 /* RoseDetialController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoseDetialController.h; sourceTree = "<group>"; };
+		179EDA9621A12B0900A107A0 /* RoseDetialController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoseDetialController.m; sourceTree = "<group>"; };
+		179EDA9721A12B0900A107A0 /* RoseDetialController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoseDetialController.xib; sourceTree = "<group>"; };
+		179EDA9A21A12E2600A107A0 /* TacticCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TacticCell.h; sourceTree = "<group>"; };
+		179EDA9B21A12E2600A107A0 /* TacticCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TacticCell.m; sourceTree = "<group>"; };
+		179EDA9C21A12E2600A107A0 /* TacticCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TacticCell.xib; sourceTree = "<group>"; };
+		179EDAA121A190D300A107A0 /* tactic1.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = tactic1.rtfd; sourceTree = "<group>"; };
+		179EDAA321A193B000A107A0 /* TacticDetialController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TacticDetialController.h; sourceTree = "<group>"; };
+		179EDAA421A193B000A107A0 /* TacticDetialController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TacticDetialController.m; sourceTree = "<group>"; };
+		179EDAA521A193B000A107A0 /* TacticDetialController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TacticDetialController.xib; sourceTree = "<group>"; };
+		179EDAA921A1A4E900A107A0 /* tactic2.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = tactic2.rtfd; sourceTree = "<group>"; };
+		179EDAAB21A1A87D00A107A0 /* tactic3.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = tactic3.rtfd; sourceTree = "<group>"; };
+		179EDAAE21A1A96900A107A0 /* tactic5.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = tactic5.rtfd; sourceTree = "<group>"; };
+		179EDAB021A1A99900A107A0 /* tactic6.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = tactic6.rtfd; sourceTree = "<group>"; };
+		179EDAB221A1AA0500A107A0 /* tactic4.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = tactic4.rtfd; sourceTree = "<group>"; };
+		179EDAB621A1AB3800A107A0 /* tactic7.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = tactic7.rtfd; sourceTree = "<group>"; };
+		179EDAB821A1AB3F00A107A0 /* tactic8.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = tactic8.rtfd; sourceTree = "<group>"; };
+		179EDABA21A1AB4D00A107A0 /* tactic9.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = tactic9.rtfd; sourceTree = "<group>"; };
+		179EDABC21A1AB5500A107A0 /* tactic10.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = tactic10.rtfd; sourceTree = "<group>"; };
+		179EDABE21A1AB5A00A107A0 /* tactic11.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = tactic11.rtfd; sourceTree = "<group>"; };
+		179EDAC021A1AB5F00A107A0 /* tactic12.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = tactic12.rtfd; sourceTree = "<group>"; };
+		179EDAC221A1AB6500A107A0 /* tactic13.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = tactic13.rtfd; sourceTree = "<group>"; };
+		179EDAC421A1AB6B00A107A0 /* tactic14.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = tactic14.rtfd; sourceTree = "<group>"; };
+		179EDAC721A1BA9C00A107A0 /* SettingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingController.h; sourceTree = "<group>"; };
+		179EDAC821A1BA9C00A107A0 /* SettingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingController.m; sourceTree = "<group>"; };
+		179EDAC921A1BA9C00A107A0 /* SettingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingController.xib; sourceTree = "<group>"; };
+		179EDACC21A1BE9100A107A0 /* MyCollectController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectController.h; sourceTree = "<group>"; };
+		179EDACD21A1BE9100A107A0 /* MyCollectController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectController.m; sourceTree = "<group>"; };
+		179EDACE21A1BE9100A107A0 /* MyCollectController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +130,16 @@
 		179EDA6921A114D700A107A0 /* RoseTactic */ = {
 			isa = PBXGroup;
 			children = (
+				179EDAC621A1BA8A00A107A0 /* 设置 */,
+				179EDA8121A115F000A107A0 /* 攻略 */,
+				179EDA8021A115D800A107A0 /* 鲜花 */,
 				179EDA6A21A114D700A107A0 /* AppDelegate.h */,
 				179EDA6B21A114D700A107A0 /* AppDelegate.m */,
 				179EDA6D21A114D700A107A0 /* ViewController.h */,
 				179EDA6E21A114D700A107A0 /* ViewController.m */,
+				179EDA9221A11BF700A107A0 /* TabBarController.h */,
+				179EDA9321A11BF700A107A0 /* TabBarController.m */,
+				179EDA9121A117A400A107A0 /* PrefixHeader.pch */,
 				179EDA7021A114D700A107A0 /* Main.storyboard */,
 				179EDA7321A114D800A107A0 /* Assets.xcassets */,
 				179EDA7521A114D800A107A0 /* LaunchScreen.storyboard */,
@@ -69,6 +147,73 @@
 				179EDA7921A114D800A107A0 /* main.m */,
 			);
 			path = RoseTactic;
+			sourceTree = "<group>";
+		};
+		179EDA8021A115D800A107A0 /* 鲜花 */ = {
+			isa = PBXGroup;
+			children = (
+				179EDA8721A1161F00A107A0 /* RoseController.h */,
+				179EDA8821A1161F00A107A0 /* RoseController.m */,
+				179EDA8921A1161F00A107A0 /* RoseController.xib */,
+				179EDA8C21A116D200A107A0 /* RoseCell.h */,
+				179EDA8D21A116D200A107A0 /* RoseCell.m */,
+				179EDA8E21A116D200A107A0 /* RoseCell.xib */,
+				179EDA9521A12B0900A107A0 /* RoseDetialController.h */,
+				179EDA9621A12B0900A107A0 /* RoseDetialController.m */,
+				179EDA9721A12B0900A107A0 /* RoseDetialController.xib */,
+			);
+			path = "鲜花";
+			sourceTree = "<group>";
+		};
+		179EDA8121A115F000A107A0 /* 攻略 */ = {
+			isa = PBXGroup;
+			children = (
+				179EDA8221A1161200A107A0 /* TacticController.h */,
+				179EDA8321A1161200A107A0 /* TacticController.m */,
+				179EDA8421A1161200A107A0 /* TacticController.xib */,
+				179EDA9A21A12E2600A107A0 /* TacticCell.h */,
+				179EDA9B21A12E2600A107A0 /* TacticCell.m */,
+				179EDA9C21A12E2600A107A0 /* TacticCell.xib */,
+				179EDAA321A193B000A107A0 /* TacticDetialController.h */,
+				179EDAA421A193B000A107A0 /* TacticDetialController.m */,
+				179EDAA521A193B000A107A0 /* TacticDetialController.xib */,
+				179EDAA021A18EC300A107A0 /* Content */,
+			);
+			path = "攻略";
+			sourceTree = "<group>";
+		};
+		179EDAA021A18EC300A107A0 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				179EDAA121A190D300A107A0 /* tactic1.rtfd */,
+				179EDAA921A1A4E900A107A0 /* tactic2.rtfd */,
+				179EDAAB21A1A87D00A107A0 /* tactic3.rtfd */,
+				179EDAB221A1AA0500A107A0 /* tactic4.rtfd */,
+				179EDAAE21A1A96900A107A0 /* tactic5.rtfd */,
+				179EDAB021A1A99900A107A0 /* tactic6.rtfd */,
+				179EDAB621A1AB3800A107A0 /* tactic7.rtfd */,
+				179EDAB821A1AB3F00A107A0 /* tactic8.rtfd */,
+				179EDABA21A1AB4D00A107A0 /* tactic9.rtfd */,
+				179EDABC21A1AB5500A107A0 /* tactic10.rtfd */,
+				179EDABE21A1AB5A00A107A0 /* tactic11.rtfd */,
+				179EDAC021A1AB5F00A107A0 /* tactic12.rtfd */,
+				179EDAC221A1AB6500A107A0 /* tactic13.rtfd */,
+				179EDAC421A1AB6B00A107A0 /* tactic14.rtfd */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		179EDAC621A1BA8A00A107A0 /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				179EDAC721A1BA9C00A107A0 /* SettingController.h */,
+				179EDAC821A1BA9C00A107A0 /* SettingController.m */,
+				179EDAC921A1BA9C00A107A0 /* SettingController.xib */,
+				179EDACC21A1BE9100A107A0 /* MyCollectController.h */,
+				179EDACD21A1BE9100A107A0 /* MyCollectController.m */,
+				179EDACE21A1BE9100A107A0 /* MyCollectController.xib */,
+			);
+			path = "设置";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +273,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				179EDAC121A1AB5F00A107A0 /* tactic12.rtfd in Resources */,
 				179EDA7721A114D800A107A0 /* LaunchScreen.storyboard in Resources */,
+				179EDAC521A1AB6B00A107A0 /* tactic14.rtfd in Resources */,
+				179EDA8621A1161200A107A0 /* TacticController.xib in Resources */,
+				179EDAAA21A1A4E900A107A0 /* tactic2.rtfd in Resources */,
+				179EDAA221A190D300A107A0 /* tactic1.rtfd in Resources */,
+				179EDABF21A1AB5A00A107A0 /* tactic11.rtfd in Resources */,
+				179EDAB721A1AB3800A107A0 /* tactic7.rtfd in Resources */,
+				179EDAB921A1AB3F00A107A0 /* tactic8.rtfd in Resources */,
+				179EDA9921A12B0900A107A0 /* RoseDetialController.xib in Resources */,
 				179EDA7421A114D800A107A0 /* Assets.xcassets in Resources */,
 				179EDA7221A114D700A107A0 /* Main.storyboard in Resources */,
+				179EDAA721A193B000A107A0 /* TacticDetialController.xib in Resources */,
+				179EDAAC21A1A87D00A107A0 /* tactic3.rtfd in Resources */,
+				179EDA9021A116D200A107A0 /* RoseCell.xib in Resources */,
+				179EDA8B21A1161F00A107A0 /* RoseController.xib in Resources */,
+				179EDACB21A1BA9C00A107A0 /* SettingController.xib in Resources */,
+				179EDABD21A1AB5500A107A0 /* tactic10.rtfd in Resources */,
+				179EDAB321A1AA0500A107A0 /* tactic4.rtfd in Resources */,
+				179EDABB21A1AB4D00A107A0 /* tactic9.rtfd in Resources */,
+				179EDAB121A1A99900A107A0 /* tactic6.rtfd in Resources */,
+				179EDA9E21A12E2600A107A0 /* TacticCell.xib in Resources */,
+				179EDAD021A1BE9100A107A0 /* MyCollectController.xib in Resources */,
+				179EDAC321A1AB6500A107A0 /* tactic13.rtfd in Resources */,
+				179EDAAF21A1A96900A107A0 /* tactic5.rtfd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +308,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				179EDACF21A1BE9100A107A0 /* MyCollectController.m in Sources */,
+				179EDA9421A11BF700A107A0 /* TabBarController.m in Sources */,
+				179EDA9821A12B0900A107A0 /* RoseDetialController.m in Sources */,
+				179EDACA21A1BA9C00A107A0 /* SettingController.m in Sources */,
 				179EDA6F21A114D700A107A0 /* ViewController.m in Sources */,
+				179EDA8521A1161200A107A0 /* TacticController.m in Sources */,
+				179EDAA621A193B000A107A0 /* TacticDetialController.m in Sources */,
+				179EDA8A21A1161F00A107A0 /* RoseController.m in Sources */,
 				179EDA7A21A114D800A107A0 /* main.m in Sources */,
+				179EDA8F21A116D200A107A0 /* RoseCell.m in Sources */,
 				179EDA6C21A114D700A107A0 /* AppDelegate.m in Sources */,
+				179EDA9D21A12E2600A107A0 /* TacticCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,16 +461,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = WU3DD344F3;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RoseTactic/PrefixHeader.pch";
 				INFOPLIST_FILE = RoseTactic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cyc.teacher.RoseTactic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "RoseTactic Development";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,16 +481,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = WU3DD344F3;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RoseTactic/PrefixHeader.pch";
 				INFOPLIST_FILE = RoseTactic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cyc.teacher.RoseTactic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = RoseTacticDistribution;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
