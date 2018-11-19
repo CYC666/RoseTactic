@@ -8,10 +8,15 @@
 
 #import "SettingController.h"
 #import "MyCollectController.h"
+#import <AVFoundation/AVFoundation.h>
 
 
+@interface SettingController () <AVAudioPlayerDelegate>
 
-@interface SettingController ()
+@property (strong, nonatomic) AVAudioPlayer *player;
+@property (assign, nonatomic) BOOL isPlay;  // 是否正在播放音乐
+@property (weak, nonatomic) IBOutlet UISlider *slider;  // 调节音量
+
 
 @property (weak, nonatomic) IBOutlet UIButton *button1; // 我的收藏
 
@@ -37,11 +42,59 @@
     [super viewDidLoad];
     
     self.title = @"设置";
+    _slider.alpha = 0;
+    
+    
+}
+
+- (AVAudioPlayer *)player {
+    
+    if (!_player) {
+        
+        NSString *urlPath = [[NSBundle mainBundle] pathForResource:@"bgm" ofType:@"mp3"];
+        NSURL *url = [NSURL URLWithString:urlPath];
+        _player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        _player.delegate = self;
+        _player.volume = 0.3;
+        [_player prepareToPlay];
+    }
+    return _player;
     
 }
 
 
 #pragma mark ========================================动作响应=============================================
+
+- (IBAction)musicSwitch:(id)sender {
+    
+    _isPlay = !_isPlay;
+    
+    if (_isPlay) {
+        
+        [self.player play];
+        __weak typeof(self) weakSelf = self;
+        [UIView animateWithDuration:.35 animations:^{
+            weakSelf.slider.alpha = 1;
+        }];
+        
+    } else {
+        
+        [self.player pause];
+        __weak typeof(self) weakSelf = self;
+        [UIView animateWithDuration:.35 animations:^{
+            weakSelf.slider.alpha = 0;
+        }];
+        
+    }
+    
+}
+
+- (IBAction)slider:(id)sender {
+    
+    self.player.volume = _slider.value;
+    
+}
+
 
 - (IBAction)button1:(id)sender {
     
@@ -92,7 +145,14 @@
 
 #pragma mark ========================================代理方法=============================================
 
-
+#pragma mark - 播放结束
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    
+    // 循环播放
+    [player play];
+    
+    
+}
 
 
 

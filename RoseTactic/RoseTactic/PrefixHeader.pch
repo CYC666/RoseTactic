@@ -18,8 +18,8 @@
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
-#define Nav_Height          (kScreenHeight == 812 ? 88 : 64)
-#define TabBar_Height       (kScreenHeight == 812 ? 83 : 49)
+#define Nav_Height          (kScreenHeight >= 812 ? 88 : 64)
+#define TabBar_Height       (kScreenHeight >= 812 ? 83 : 49)
 
 // 图片
 #define CImage(name) [UIImage imageNamed:name]

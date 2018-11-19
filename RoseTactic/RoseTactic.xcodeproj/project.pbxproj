@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1748640721A2460C00AB31B9 /* bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1748640621A2460C00AB31B9 /* bgm.mp3 */; };
 		179EDA6C21A114D700A107A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 179EDA6B21A114D700A107A0 /* AppDelegate.m */; };
 		179EDA6F21A114D700A107A0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 179EDA6E21A114D700A107A0 /* ViewController.m */; };
 		179EDA7221A114D700A107A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179EDA7021A114D700A107A0 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1748640621A2460C00AB31B9 /* bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm.mp3; sourceTree = "<group>"; };
 		179EDA6721A114D700A107A0 /* RoseTactic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoseTactic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		179EDA6A21A114D700A107A0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		179EDA6B21A114D700A107A0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				179EDACC21A1BE9100A107A0 /* MyCollectController.h */,
 				179EDACD21A1BE9100A107A0 /* MyCollectController.m */,
 				179EDACE21A1BE9100A107A0 /* MyCollectController.xib */,
+				1748640621A2460C00AB31B9 /* bgm.mp3 */,
 			);
 			path = "设置";
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				179EDAA721A193B000A107A0 /* TacticDetialController.xib in Resources */,
 				179EDAAC21A1A87D00A107A0 /* tactic3.rtfd in Resources */,
 				179EDA9021A116D200A107A0 /* RoseCell.xib in Resources */,
+				1748640721A2460C00AB31B9 /* bgm.mp3 in Resources */,
 				179EDA8B21A1161F00A107A0 /* RoseController.xib in Resources */,
 				179EDACB21A1BA9C00A107A0 /* SettingController.xib in Resources */,
 				179EDABD21A1AB5500A107A0 /* tactic10.rtfd in Resources */,
