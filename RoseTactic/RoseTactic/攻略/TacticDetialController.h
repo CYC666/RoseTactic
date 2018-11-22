@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TacticDetialController : UIViewController
 
-@property (assign, nonatomic) NSInteger row;
+@property (copy, nonatomic) NSString *content;
 
 @end
 

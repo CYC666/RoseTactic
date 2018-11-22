@@ -9,13 +9,17 @@
 #import "TacticController.h"
 #import "TacticCell.h"
 #import "TacticDetialController.h"
+#import "MJRefresh.h"
+#import "SVProgressHUD.h"
 
 @interface TacticController () <UITableViewDelegate, UITableViewDataSource> {
+ 
+    NSMutableArray *dataArray;   // 数据列表
+    NSInteger currentPage;
     
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
-@property (strong, nonatomic) NSArray *dataArray;
 
 @end
 
@@ -26,50 +30,9 @@
     [super viewDidLoad];
     
     self.title = @"攻略";
+    dataArray = [NSMutableArray array];
     
-    _dataArray = @[@{@"title" : @"1、主线任务之天赋宝宝任务",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"2、天赋宝宝的疑问",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"3、解救天赋宝宝任务的疑问",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"4、魔法任务详细步骤",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"5、成就任务",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"6、浪漫花房",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"￼7、各种玫瑰采摘所得奖励",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"8、嫁接玫瑰表",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"9、鲜花、水生花、绝版花周期表",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"10、收益对比表",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"11、鲜花嫁接表",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"12、宝宝炼化常见问题",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"13、魅力与魅力等级、经验值与技能等级",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"14、蓝钻日礼包、周礼包、月礼包及年钻礼包",
-                     @"from" : @"玫瑰小镇吧",
-                     }
-                   ];
+   
     
     // 创建视图
     [self creatSubViewsAction];
@@ -84,6 +47,7 @@
 - (void)creatSubViewsAction {
     
     // 表视图
+    _listTableView.alpha = 0;
     _listTableView.backgroundColor = [UIColor clearColor];
     _listTableView.rowHeight = 80;
     _listTableView.estimatedRowHeight = 0;
@@ -101,12 +65,78 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    [self loadListAction:NO];
+    
+    _listTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [self loadListAction:NO];
+        
+        [_listTableView.mj_header endRefreshing];
+        
+    }];
+    
+    
+    _listTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        
+        [self loadListAction:YES];
+        
+        [_listTableView.mj_footer endRefreshing];
+    }];
+    
+    
 }
 
 #pragma mark ========================================动作响应=============================================
 
 
 #pragma mark ========================================网络请求=============================================
+
+
+
+#pragma mark - 获取列表
+- (void)loadListAction:(BOOL)isfooter {
+    
+    if (isfooter) {
+        currentPage ++;
+    } else {
+        currentPage = 1;
+        [dataArray removeAllObjects];
+    }
+    
+    [SVProgressHUD showWithStatus:@"加载数据中"];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Tactic" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    
+    NSError *error = nil;
+    NSArray *items = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    
+    NSInteger count = dataArray.count;
+    for (int i = 0; i < 5; i++) {
+        
+        if (dataArray.count >= 14) {
+            [_listTableView.mj_footer endRefreshingWithNoMoreData];
+            break;
+        } else {
+            [dataArray addObject:items[i+count]];
+        }
+        
+        
+    }
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [UIView animateWithDuration:.35 animations:^{
+            _listTableView.alpha = 1;
+        }];
+        [_listTableView reloadData];
+        [SVProgressHUD dismiss];
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    });
+    
+}
+
 
 #pragma mark ========================================代理方法=============================================
 
@@ -115,7 +145,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return _dataArray.count;
+    return dataArray.count;
     
 }
 
@@ -138,11 +168,11 @@
     TacticCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TacticCell"
                                                             forIndexPath:indexPath];
     
-    NSDictionary *dic = _dataArray[indexPath.row];
+    NSDictionary *dic = dataArray[indexPath.row];
     
     cell.label1.text = dic[@"title"];
     cell.label2.text = dic[@"from"];
-    cell.icon.image = [UIImage imageNamed:[NSString stringWithFormat:@"tactic%ld", indexPath.row + 1]];
+    cell.icon.image = [UIImage imageNamed:dic[@"image"]];
     
     return cell;
     
@@ -152,10 +182,10 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSDictionary *dic = _dataArray[indexPath.row];
+    NSDictionary *dic = dataArray[indexPath.row];
     TacticDetialController *ctrl = [[TacticDetialController alloc] init];
     ctrl.title = dic[@"title"];
-    ctrl.row = indexPath.row;
+    ctrl.content = dic[@"content"];
     [self.navigationController pushViewController:ctrl animated:YES];
     
     

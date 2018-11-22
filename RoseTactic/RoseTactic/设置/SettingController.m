@@ -44,6 +44,10 @@
     self.title = @"设置";
     _slider.alpha = 0;
     
+    // 当前版本号
+    NSString *app_Version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    _label3.text = [NSString stringWithFormat:@"v%@", app_Version];
+    
     
 }
 
@@ -123,14 +127,21 @@
     
     // 弹框提示是否执行
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
-                                                                   message:@"当前版本已经是最新版本"
+                                                                   message:@"是否前往App Store？"
                                                             preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消"
+                                              style:UIAlertActionStyleCancel
+                                            handler:^(UIAlertAction * _Nonnull action) {
+                                                
+                                               
+                                            }]];
     
     [alert addAction:[UIAlertAction actionWithTitle:@"确定"
                                               style:UIAlertActionStyleDefault
                                             handler:^(UIAlertAction * _Nonnull action) {
                                                 
-                                                
+                                                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/cn/app/id1443328213"] options:nil completionHandler:nil];
                                                 
                                             }]];
     

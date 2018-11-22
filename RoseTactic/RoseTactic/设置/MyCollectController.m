@@ -15,7 +15,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
-@property (strong, nonatomic) NSArray *dataArray;
+@property (strong, nonatomic) NSMutableArray *dataArray;
 
 @end
 
@@ -26,28 +26,35 @@
     [super viewDidLoad];
     
     self.title = @"我的收藏";
+    _dataArray = [NSMutableArray array];
+    _listTableView.alpha = 0;
     
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Tactic" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
     
-    _dataArray = @[@{@"title" : @"1、主线任务之天赋宝宝任务",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"2、天赋宝宝的疑问",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   
-                   @{@"title" : @"6、浪漫花房",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"￼7、各种玫瑰采摘所得奖励",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"11、鲜花嫁接表",
-                     @"from" : @"玫瑰小镇吧",
-                     },
-                   @{@"title" : @"13、魅力与魅力等级、经验值与技能等级",
-                     @"from" : @"玫瑰小镇吧",
-                     }
-                   ];
+    NSError *error = nil;
+    NSArray *items = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    
+    // 文件写入
+    NSString *collectStr = [[NSUserDefaults standardUserDefaults] valueForKey:@"collect"];
+    if (collectStr) {
+        
+        NSArray * list = [collectStr componentsSeparatedByString:@"|"];
+        
+        for (int i = 0; i < list.count; i++) {
+            
+            NSString *content = list[i];
+            NSDictionary *dic = items[content.integerValue - 1];
+            [_dataArray addObject:dic];
+            
+        }
+        
+    }
+
+    [UIView animateWithDuration:.35 animations:^{
+        _listTableView.alpha = 1;
+    }];
+    [_listTableView reloadData];
     
     // 创建视图
     [self creatSubViewsAction];
@@ -121,7 +128,7 @@
     
     cell.label1.text = dic[@"title"];
     cell.label2.text = dic[@"from"];
-    cell.icon.image = [UIImage imageNamed:[NSString stringWithFormat:@"tactic%ld", indexPath.row + 1]];
+    cell.icon.image = [UIImage imageNamed:dic[@"image"]];
     
     return cell;
     
@@ -134,7 +141,7 @@
     NSDictionary *dic = _dataArray[indexPath.row];
     TacticDetialController *ctrl = [[TacticDetialController alloc] init];
     ctrl.title = dic[@"title"];
-    ctrl.row = indexPath.row;
+    ctrl.content = dic[@"content"];
     [self.navigationController pushViewController:ctrl animated:YES];
     
     
